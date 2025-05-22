@@ -199,9 +199,17 @@ let exitIcon = document.querySelector('.exitIcon');
     }
   });
 
-document.querySelectorAll('.item i').forEach(icon => {
-    icon.addEventListener('click', function () {
-      const item = this.closest('.item');
-      item.classList.toggle('expanded');
-    });
+
+  document.querySelectorAll('.item i').forEach(icon => {
+  icon.addEventListener('click', function () {
+    const item = this.closest('.item');
+    item.classList.toggle('expanded');
+
+    const content = item.querySelector('.content');
+    if (item.classList.contains('expanded')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = '0';
+    }
   });
+});
