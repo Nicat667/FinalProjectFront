@@ -198,3 +198,10 @@ let exitIcon = document.querySelector('.exitIcon');
       document.body.style.overflow = '';
     }
   });
+
+document.querySelectorAll('.item i').forEach(icon => {
+    icon.addEventListener('click', function () {
+      const item = this.closest('.item');
+      item.classList.toggle('expanded');
+    });
+  });

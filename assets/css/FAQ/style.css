@@ -512,8 +512,7 @@
 }
 #questions .cus-container {
   width: 86%;
-  height: 100px;
-  background-color: red;
+  height: auto;
 }
 #questions .cus-container p {
   font-size: 34px;
@@ -522,7 +521,36 @@
 }
 #questions .cus-container .row {
   width: 100%;
-  background-color: blue;
+  height: auto;
+  gap: 15px;
+  margin-top: 20px;
+}
+#questions .cus-container .row .item {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#questions .cus-container .row .item i {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+#questions .cus-container .row .item .content {
+  margin-left: 20px;
+  width: 86%;
+  font-size: 18px;
+  color: gray;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+#questions .cus-container .row .item.expanded .content {
+  max-height: 500px;
+}
+#questions .cus-container .row .item.expanded i {
+  transform: rotate(45deg);
 }
 
 #subscribtion {
