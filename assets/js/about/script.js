@@ -198,3 +198,26 @@ let exitIcon = document.querySelector('.exitIcon');
       document.body.style.overflow = '';
     }
   });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("myVideo");
+  const playBtn = document.getElementById("playBtn");
+  const icon = playBtn.querySelector("i");
+
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener("play", () => {
+    icon.classList.replace("fa-play", "fa-pause");
+  });
+
+  video.addEventListener("pause", () => {
+    icon.classList.replace("fa-pause", "fa-play");
+  });
+});
