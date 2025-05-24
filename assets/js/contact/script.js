@@ -198,3 +198,44 @@ let exitIcon = document.querySelector('.exitIcon');
       document.body.style.overflow = '';
     }
   });
+
+
+
+
+const address = document.querySelector(".addressForMap").textContent;
+const apiKey = "AIzaSyBu6mYs894keUMuKa0Dx2HW756Xwg3yoQs";
+const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === "OK") {
+      const location = data.results[0].geometry.location;
+      const lat = location.lat;
+      const lng = location.lng;
+      console.log("Coordinates:", lat, lng);
+
+
+      initMap(lat, lng);
+    } else {
+      console.error("Geocoding error:", data.status);
+    }
+  })
+  .catch(error => console.error("Request failed:", error));
+
+
+  function initMap(lat, lng) {
+  const map = new google.maps.Map(document.getElementById("map-canvas"), {
+    center: { lat, lng },
+    zoom: 15,
+  });
+
+  new google.maps.Marker({
+    position: { lat, lng },
+    map: map,
+    title: address,
+  });
+}
+
+
+  

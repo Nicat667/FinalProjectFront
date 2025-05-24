@@ -505,6 +505,133 @@
   padding-bottom: 10px;
 }
 
+#map .cus-container #map-canvas {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#info {
+  width: 100%;
+  height: auto;
+  min-height: 555px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+#info .cus-container {
+  width: 86%;
+  height: 100%;
+}
+#info .cus-container .row {
+  width: 100%;
+  height: 555px;
+}
+#info .cus-container .row .left {
+  width: 93%;
+}
+#info .cus-container .row .left .title {
+  font-size: 35px;
+  font-weight: 500;
+}
+#info .cus-container .row .left .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(179, 179, 179);
+}
+#info .cus-container .row .left .location {
+  font-size: 18px;
+  margin-top: 30px;
+}
+#info .cus-container .row .left .location i {
+  color: rgb(48, 176, 241);
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#info .cus-container .row .left .phone {
+  width: 350px;
+  font-size: 18px;
+  margin-top: 20px;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  border-top: 1px solid rgb(190, 190, 190);
+}
+#info .cus-container .row .left .phone i {
+  color: rgb(16, 164, 238);
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#info .cus-container .row .left .mail {
+  font-size: 18px;
+  margin-top: 20px;
+}
+#info .cus-container .row .left .mail i {
+  color: rgb(16, 164, 238);
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#info .cus-container .row .right {
+  height: 92%;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#info .cus-container .row .right .contain {
+  width: 92%;
+  height: 94%;
+}
+#info .cus-container .row .right .contain .title {
+  font-size: 35px;
+  font-weight: 500;
+}
+#info .cus-container .row .right .contain form input {
+  height: 46px;
+  border-radius: 13px;
+}
+#info .cus-container .row .right .contain form textarea {
+  height: 100px;
+  resize: none;
+}
+#info .cus-container .row .right .contain form .button {
+  height: 45px;
+  width: 100px;
+  border-radius: 12px;
+}
+
+@media (max-width: 842px) {
+  #info .left .phone {
+    width: 300px !important;
+  }
+}
+@media (max-width: 768px) {
+  #info {
+    margin-bottom: 430px !important;
+  }
+  #info .right {
+    height: 510px !important;
+  }
+}
+@media (max-width: 429px) {
+  #info {
+    margin-bottom: 500px !important;
+  }
+}
+@media (max-width: 358px) {
+  #info {
+    margin-bottom: 550px !important;
+  }
+}
+@media (max-width: 349px) {
+  #info .right {
+    height: 540px !important;
+  }
+}
 #footer {
   width: 100%;
   height: 411px;
