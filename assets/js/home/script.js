@@ -201,45 +201,194 @@ document.addEventListener('click', (e) => {
 
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const track = document.querySelector(".carousel-track");
+//   const items = document.querySelectorAll(".x");
+//   const btnLeft = document.querySelector(".carousel-btn.left");
+//   const btnRight = document.querySelector(".carousel-btn.right");
+
+//   const visibleItems = 4;
+//   const itemFullWidth = 310 + 12; 
+//   const totalItems = items.length;
+
+//   console.log(totalItems)
+
+//   let currentTranslate = 0;
+
+//   const maxNegativeTranslate = -(itemFullWidth * (totalItems - visibleItems));
+
+//   function updateCarousel() {
+//     track.style.transform = `translateX(${currentTranslate}px)`;
+//   }
+
+//   btnRight.addEventListener("click", () => {
+//     const nextTranslate = currentTranslate - itemFullWidth;
+//     if (nextTranslate >= maxNegativeTranslate) {
+//       currentTranslate = nextTranslate;
+//       updateCarousel();
+//     }
+//   });
+
+//   btnLeft.addEventListener("click", () => {
+//     const nextTranslate = currentTranslate + itemFullWidth;
+//     if (nextTranslate <= 0) {
+//       currentTranslate = nextTranslate;
+//       updateCarousel();
+//     }
+//   });
+
+//   window.addEventListener("resize", updateCarousel);
+
+//   updateCarousel();
+// });
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector(".carousel-track");
-  const items = document.querySelectorAll(".x");
+  const items = document.querySelectorAll(".carousel-track .blog-link");
   const btnLeft = document.querySelector(".carousel-btn.left");
   const btnRight = document.querySelector(".carousel-btn.right");
 
-  const visibleItems = 4;
-  const itemFullWidth = 310 + 17; 
-  const totalItems = items.length;
+  let currentIndex = 0;
 
-  console.log(totalItems)
+  function getItemWidth() {
+    return items[0]?.offsetWidth || 0;
+  }
 
-  let currentTranslate = 0;
+  function getVisibleCount() {
+    const wrapperWidth = document.querySelector(".carousel-track-wrapper").offsetWidth;
+    const itemWidth = getItemWidth();
+    return Math.floor(wrapperWidth / itemWidth);
+  }
 
-  const maxNegativeTranslate = -(itemFullWidth * (totalItems - visibleItems));
+  function getMaxIndex() {
+    const total = items.length;
+    const visible = getVisibleCount();
+    return total - visible;
+  }
 
   function updateCarousel() {
-    track.style.transform = `translateX(${currentTranslate}px)`;
+    const itemWidth = getItemWidth();
+    const translateX = -currentIndex * itemWidth;
+    track.style.transform = `translateX(${translateX}px)`;
   }
 
   btnRight.addEventListener("click", () => {
-    const nextTranslate = currentTranslate - itemFullWidth;
-    if (nextTranslate >= maxNegativeTranslate) {
-      currentTranslate = nextTranslate;
+    const maxIndex = getMaxIndex();
+    if (currentIndex < maxIndex) {
+      currentIndex++;
       updateCarousel();
     }
   });
 
   btnLeft.addEventListener("click", () => {
-    const nextTranslate = currentTranslate + itemFullWidth;
-    if (nextTranslate <= 0) {
-      currentTranslate = nextTranslate;
+    if (currentIndex > 0) {
+      currentIndex--;
       updateCarousel();
     }
   });
 
-  window.addEventListener("resize", updateCarousel);
+  window.addEventListener("resize", () => {
+    currentIndex = 0;
+    updateCarousel();
+  });
 
   updateCarousel();
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moveUpBtn = document.querySelector(".move-up");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 800) {
+      moveUpBtn.style.display = "flex";
+    } else {
+      moveUpBtn.style.display = "none";
+    }
+  });
+
+  moveUpBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+const spans = document.querySelectorAll('.categories span');
+
+spans.forEach(span => {
+  span.addEventListener('click', () => {
+    
+    spans.forEach(s => s.classList.remove('active'));
+    
+    span.classList.add('active');
+  });
+});
+
+
+
+
+
+let guestRoom = document.querySelector(".guest");
+let guestTab = document.querySelector(".guest-inc-dec")
+guestRoom.addEventListener('click', function(){
+    if(guestTab.classList.contains("d-none")){
+        guestTab.classList.remove("d-none");
+    }
+    else{
+        guestTab.classList.add("d-none")
+    }
+})
+
+document.addEventListener('click', function (e) {
+    if (!guestTab.contains(e.target) && !guestRoom.contains(e.target)) {
+        guestTab.classList.add("d-none");
+    }
+});
+
+
+guestTab.addEventListener('click', function (e) {
+    e.stopPropagation();
+});
+
+
+const guestCountDisplay = document.querySelector('.number span:nth-child(1)');
+const roomCountDisplay = document.querySelector('.number span:nth-child(2)');
+
+const guestInput = document.querySelector('.number-input input');
+const roomInput = document.querySelector('.number-input2 input');
+
+// Update display
+function updateCounts() {
+  guestCountDisplay.textContent = guestInput.value;
+  roomCountDisplay.textContent = roomInput.value;
+}
+
+// Only update values and display once per click
+document.querySelector('.increment').addEventListener('click', () => {
+  guestInput.value = Number(guestInput.value) + 1;
+  updateCounts();
+});
+
+document.querySelector('.decrement').addEventListener('click', () => {
+  if (Number(guestInput.value) > 0) {
+    guestInput.value = Number(guestInput.value) - 1;
+    updateCounts();
+  }
+});
+
+document.querySelector('.increment2').addEventListener('click', () => {
+  roomInput.value = Number(roomInput.value) + 1;
+  updateCounts();
+});
+
+document.querySelector('.decrement2').addEventListener('click', () => {
+  if (Number(roomInput.value) > 0) {
+    roomInput.value = Number(roomInput.value) - 1;
+    updateCounts();
+  }
+});

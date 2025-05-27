@@ -221,3 +221,23 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.classList.replace("fa-pause", "fa-play");
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moveUpBtn = document.querySelector(".move-up");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 800) {
+      moveUpBtn.style.display = "flex";
+    } else {
+      moveUpBtn.style.display = "none";
+    }
+  });
+
+  moveUpBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
