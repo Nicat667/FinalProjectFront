@@ -527,247 +527,218 @@ body .move-up i {
   color: white;
 }
 
-#content {
+#hotels {
   width: 100%;
+  height: auto;
+  min-height: 553px;
+}
+#hotels .cus-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#hotels .cus-container .filter {
+  width: 42%;
+  height: 28px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hotels .cus-container .filter .count {
+  font-size: 16px;
+  font-weight: 400;
+}
+#hotels .cus-container .filter .sort {
+  width: 51px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(141, 141, 141);
+}
+#hotels .cus-container .filter .sort .icon {
+  font-size: 13px;
+  margin-left: 9px;
+}
+#hotels .cus-container .sort-tab {
+  position: absolute;
+  z-index: 10;
+  left: 536px;
+  width: 160px;
+  height: 115px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hotels .cus-container .sort-tab .contain {
+  width: 83%;
+  height: 86%;
+}
+#hotels .cus-container .sort-tab .contain .price .p {
+  font-size: 15px;
+  color: rgb(132, 131, 131);
+  font-weight: 500;
+  margin: 0;
+}
+#hotels .cus-container .row {
+  margin-bottom: 20px;
+}
+#hotels .cus-container .row .left {
   display: flex;
   justify-content: center;
 }
-#content .cus-container {
-  width: 86%;
+#hotels .cus-container .row .left .hotels {
+  width: 92%;
+  height: 553px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 7px;
 }
-#content .cus-container .row {
-  margin-top: 70px;
-}
-#content .cus-container .row .left .pagination {
-  margin: auto;
-  margin-bottom: 50px;
-}
-#content .cus-container .row .left .blogs {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-bottom: 100px;
-}
-#content .cus-container .row .left .blogs a {
-  text-decoration: none;
-  color: black;
-}
-#content .cus-container .row .left .blogs a .blog {
-  width: 825px;
-  height: 828px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  overflow: hidden;
-}
-#content .cus-container .row .left .blogs a .blog .img {
-  width: 100%;
-  height: 474px;
-}
-#content .cus-container .row .left .blogs a .blog .contain {
-  width: 90%;
-  height: 33%;
-  margin-left: 39px;
-  margin-top: 32px;
-}
-#content .cus-container .row .left .blogs a .blog .contain .x {
-  height: 30px;
-  width: 100px;
-  border-radius: 13px;
-  background-color: rgb(212, 251, 212);
-}
-#content .cus-container .row .left .blogs a .blog .contain .x i {
-  font-size: 9px;
+#hotels .cus-container .row .left .hotels .forHotels {
+  gap: 11px;
   margin-left: 10px;
 }
-#content .cus-container .row .left .blogs a .blog .contain .x span {
-  font-weight: 500;
+#hotels .cus-container .row .left .hotels .forHotels .item {
+  width: 323px;
+  height: 432px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#content .cus-container .row .left .blogs a .blog .contain .head {
-  font-size: 26px;
-  font-weight: 600;
-  margin-top: 20px;
+#hotels .cus-container .row .left .hotels .forHotels .item a {
+  text-decoration: none;
+  width: 323px;
 }
-#content .cus-container .row .left .blogs a .blog .contain .content {
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: 20px;
-  color: rgb(144, 142, 142);
-}
-#content .cus-container .row .left .blogs a .blog .contain .author {
+#hotels .cus-container .row .left .hotels .forHotels .item .image {
   width: 100%;
-  height: 50px;
-  margin-top: 40px;
+  height: 215px;
+  overflow: hidden;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  top: 199px;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .stars {
+  margin-top: 18px;
+  width: 100%;
+  height: 14px;
+  display: flex;
+  gap: 5px;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .stars span {
+  font-size: 12px;
+  color: rgb(236, 111, 22);
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .location {
+  width: 100%;
+  margin-top: 10px;
+  height: 75px;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .location p {
+  font-size: 19px;
+  font-weight: 600;
+  color: black;
+  text-align: start;
+  margin: 0;
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .location span {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(110, 110, 110);
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .rating {
+  width: 100%;
+  height: 28px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
-#content .cus-container .row .left .blogs a .blog .contain .author .image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-#content .cus-container .row .left .blogs a .blog .contain .author .name {
-  font-size: 17px;
-  font-weight: 500;
-  margin-top: 12px;
-}
-#content .cus-container .row .left .blogs a .blog .contain .author .name p {
-  width: 109px;
-  border-right: 1px solid rgb(192, 192, 192);
-}
-#content .cus-container .row .left .blogs a .blog .contain .author .date {
-  font-size: 13.5px;
-  font-weight: 500;
-  margin-top: 16px;
-  color: rgb(149, 149, 149);
-}
-#content .cus-container .row .right .stable {
-  position: sticky;
-  top: 30px;
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .rating .rate {
+  width: 46px;
+  height: 27px;
+  border: 1px solid rgb(67, 47, 248);
+  background-color: rgb(236, 245, 255);
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(67, 47, 248);
 }
-#content .cus-container .row .right .stable .categories {
-  margin-left: 10px;
-  width: 375px;
-  height: auto;
-  min-height: 432px;
-  border-radius: 20px;
-  background-color: rgb(239, 239, 239);
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .rating .count {
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(167, 167, 167);
   display: flex;
-  align-items: start;
+  align-self: center;
   justify-content: center;
 }
-#content .cus-container .row .right .stable .categories .contain {
-  margin-top: 30px;
-  width: 85%;
-  height: 80%;
-}
-#content .cus-container .row .right .stable .categories .contain .head {
-  font-size: 24px;
-  font-weight: 700;
-  height: 50px;
-  border-bottom: 1px solid rgb(190, 190, 190);
-}
-#content .cus-container .row .right .stable .categories .contain .names {
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .price {
   width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  height: 28px;
+  margin-top: 10px;
 }
-#content .cus-container .row .right .stable .categories .contain .names a {
-  text-decoration: none;
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .price .text {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(137, 137, 137);
+}
+#hotels .cus-container .row .left .hotels .forHotels .item .contain .price .value {
+  font-size: 16px;
+  font-weight: 700;
   color: black;
 }
-#content .cus-container .row .right .stable .categories .contain .names a .item {
+#hotels .cus-container .row .right .map {
   width: 100%;
-  height: 64px;
-  background-color: white;
-  border-radius: 20px;
+  height: 553px;
+}
+#hotels .cus-container .row .right .map #map-canvas {
+  width: 100%;
+  height: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-}
-#content .cus-container .row .right .stable .categories .contain .names a .item .x {
-  height: 30px;
-  width: 100px;
-  border-radius: 13px;
-  margin-left: 20px;
-  background-color: rgb(212, 251, 212);
-}
-#content .cus-container .row .right .stable .categories .contain .names a .item .x i {
-  font-size: 9px;
-  margin-left: 10px;
-}
-#content .cus-container .row .right .stable .categories .contain .names a .item .x span {
-  font-weight: 500;
-}
-#content .cus-container .row .right .stable .categories .contain .names a .item .count {
-  margin-left: 166px;
-  font-weight: 500;
-}
-#content .cus-container .row .right .stable .tags {
-  margin-left: 10px;
-  width: 375px;
-  height: auto;
-  min-height: 320px;
-  border-radius: 20px;
-  background-color: rgb(239, 239, 239);
-  display: flex;
-  align-items: start;
-  justify-content: center;
-}
-#content .cus-container .row .right .stable .tags .contain {
-  margin-top: 30px;
-  width: 85%;
-  height: 80%;
-}
-#content .cus-container .row .right .stable .tags .contain .title {
-  font-size: 24px;
-  font-weight: 700;
-  height: 50px;
-  border-bottom: 1px solid rgb(190, 190, 190);
-}
-#content .cus-container .row .right .stable .tags .contain .tag-row {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-#content .cus-container .row .right .stable .tags .contain .tag-row .tag {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 44px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-@media (max-width: 1413px) {
-  #content .cus-container .row .left .blog {
-    width: 750px !important;
-  }
-}
-@media (max-width: 1275px) {
-  #content .cus-container .row .left .blog {
-    width: 700px !important;
-  }
-}
-@media (max-width: 1193px) {
-  #content .cus-container .row .left .blog {
-    width: 670px !important;
-  }
-}
-@media (max-width: 1136px) {
-  #content .cus-container .row .left .blog {
-    width: 620px !important;
-  }
-}
-@media (max-width: 1051px) {
-  #content .cus-container .row .left .blog {
-    width: 580px !important;
-  }
-}
-@media (max-width: 993px) {
-  #content .cus-container .row .left .blog {
-    width: 100% !important;
-  }
-}
 #footer {
   width: 100%;
   height: 411px;

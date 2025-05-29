@@ -217,3 +217,34 @@ let exitIcon = document.querySelector('.exitIcon');
     });
   });
 });
+
+let currentPage = 1;
+  const totalPages = 10;
+
+  const currentPageEl = document.getElementById("current-page");
+  const prevBtn = document.getElementById("prev-page");
+  const nextBtn = document.getElementById("next-page");
+
+  function updatePageDisplay() {
+    currentPageEl.textContent = currentPage;
+    prevBtn.parentElement.classList.toggle("disabled", currentPage === 1);
+    nextBtn.parentElement.classList.toggle("disabled", currentPage === totalPages);
+  }
+
+  prevBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      updatePageDisplay();
+    }
+  });
+
+  nextBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      currentPage++;
+      updatePageDisplay();
+    }
+  });
+
+  updatePageDisplay();
