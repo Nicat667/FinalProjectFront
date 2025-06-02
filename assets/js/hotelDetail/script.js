@@ -200,44 +200,6 @@ let exitIcon = document.querySelector('.exitIcon');
   });
 
 
-
-
-// const address = document.querySelector(".addressForMap").textContent;
-// const apiKey = "AIzaSyBu6mYs894keUMuKa0Dx2HW756Xwg3yoQs";
-// const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
-
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.status === "OK") {
-//       const location = data.results[0].geometry.location;
-//       const lat = location.lat;
-//       const lng = location.lng;
-//       console.log("Coordinates:", lat, lng);
-
-
-//       initMap(lat, lng);
-//     } else {
-//       console.error("Geocoding error:", data.status);
-//     }
-//   })
-//   .catch(error => console.error("Request failed:", error));
-
-
-//   function initMap(lat, lng) {
-//   const map = new google.maps.Map(document.getElementById("map-canvas"), {
-//     center: { lat, lng },
-//     zoom: 15,
-//   });
-
-//   new google.maps.Marker({
-//     position: { lat, lng },
-//     map: map,
-//     title: address,
-//   });
-// }
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const moveUpBtn = document.querySelector(".move-up");
 
@@ -304,25 +266,36 @@ function adjustInfoHeight() {
   const info = document.getElementById('info');
   if (!info) return;
 
-  // Reset height so it shrinks to fit content
+ 
   info.style.height = 'auto';
 
-  // Get total scrollHeight (height of content)
   const contentHeight = info.scrollHeight;
 
-  // Optionally, get viewport height to ensure minimum height
+
+  const mainImage = document.querySelector('.mainImage');
+  const map = document.querySelector('.map');
+
+  let extraHeight = 0;
+
+  if (mainImage && map) {
+    const infoBottom = info.getBoundingClientRect().top + window.scrollY + contentHeight;
+    const imageBottom = mainImage.getBoundingClientRect().bottom + window.scrollY;
+    const mapBottom = map.getBoundingClientRect().bottom + window.scrollY;
+
+    const maxBottom = Math.max(infoBottom, imageBottom, mapBottom);
+    extraHeight = maxBottom - (info.getBoundingClientRect().top + window.scrollY);
+  }
+
   const viewportHeight = window.innerHeight;
 
-  // Set height to max(contentHeight, viewportHeight - some offset)
-  info.style.height = Math.max(contentHeight, viewportHeight - 100) + 'px';
+  info.style.height = Math.max(extraHeight, viewportHeight - 100) + 100 + 'px';
 }
 
-// Call on page load
-window.addEventListener('load', adjustInfoHeight);
 
-// Call whenever content changes, e.g., after adding comments dynamically
-// You may call this manually after content update, or:
-// Example: MutationObserver to auto detect changes inside #info
+window.addEventListener('load', adjustInfoHeight);
+window.addEventListener('resize', adjustInfoHeight);
+
+
 const infoNode = document.getElementById('info');
 if (infoNode) {
   const observer = new MutationObserver(adjustInfoHeight);
@@ -330,3 +303,20 @@ if (infoNode) {
 }
 
 
+let commentButton = document.querySelector(".button-comment");
+let upComment = document.querySelector(".icon-up-comment");
+let downComment = document.querySelector(".icon-down-comment");
+let commentForm = document.querySelector(".comment-form");
+
+commentButton.addEventListener('click', function(){
+  if(!upComment.classList.contains("d-none")){
+    upComment.classList.add('d-none');
+    downComment.classList.remove('d-none');
+    commentForm.classList.remove('d-none');
+  }
+  else{
+    upComment.classList.remove('d-none');
+    downComment.classList.add('d-none');
+    commentForm.classList.add('d-none');
+  }
+})
