@@ -634,22 +634,6 @@ body .move-up i {
      object-fit: cover;
   display: block;
 }
-#hotels .cus-container .row .left .hotels .forHotels .item .circle {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  position: absolute;
-  right: 25px;
-  top: 199px;
-}
-#hotels .cus-container .row .left .hotels .forHotels .item .circle img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  border-radius: 50%;
-}
 #hotels .cus-container .row .left .hotels .forHotels .item .contain {
   width: 90%;
   height: auto;
