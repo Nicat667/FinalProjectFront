@@ -632,6 +632,7 @@ body .move-up i {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 #hotels .cus-container .row .left .hotels .forHotels .item .circle {
   width: 35px;

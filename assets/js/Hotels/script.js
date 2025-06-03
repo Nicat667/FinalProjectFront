@@ -427,3 +427,19 @@ function placeMarkers() {
 }
 
 
+// document.querySelector('.icon-like-hotel').addEventListener('click', function () {
+//     this.classList.toggle('liked');
+//     this.classList.toggle('fa-regular');
+//     this.classList.toggle('fa-solid');
+//   });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.icon-like-hotel').forEach(icon => {
+      icon.addEventListener('click', function () {
+        icon.classList.toggle('liked');
+        icon.classList.toggle('fa-regular');
+        icon.classList.toggle('fa-solid');
+      });
+    });
+  });
