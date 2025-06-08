@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet" />
+    <title>Filter Form</title>
+</head>
+
+<body>
+    <form id="filter-form" method="get" action="/Hotel/Filter">
+        <!-- Price slider container -->
+        <div>
+            <label>Price range:</label>
+            <div id="price-slider" style="margin: 20px 0;"></div>
+            <p>Selected Price: $<span id="minDisplay">50</span> - $<span id="maxDisplay">300</span></p>
+        </div>
+
+        <!-- Hidden inputs to send price data -->
+        <input type="hidden" name="minPrice" id="minPriceInput" />
+        <input type="hidden" name="maxPrice" id="maxPriceInput" />
+
+        <!-- Star rating checkboxes -->
+        <div>
+            <label>Hotel stars:</label><br />
+            <label><input type="checkbox" name="stars" value="1" /> 1 Star</label><br />
+            <label><input type="checkbox" name="stars" value="2" /> 2 Stars</label><br />
+            <label><input type="checkbox" name="stars" value="3" /> 3 Stars</label><br />
+            <label><input type="checkbox" name="stars" value="4" /> 4 Stars</label><br />
+            <label><input type="checkbox" name="stars" value="5" /> 5 Stars</label><br />
+        </div>
+
+        <button type="submit" style="margin-top: 20px;">Apply Filter</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
+    <script>
+        const priceSlider = document.getElementById('price-slider');
+        const minInput = document.getElementById('minPriceInput');
+        const maxInput = document.getElementById('maxPriceInput');
+        const minDisplay = document.getElementById('minDisplay');
+        const maxDisplay = document.getElementById('maxDisplay');
+
+        noUiSlider.create(priceSlider, {
+            start: [50, 300], // default selected range
+            connect: true,
+            range: {
+                min: 0,
+                max: 500
+            },
+            step: 1,
+            format: {
+                to: value => Math.round(value),
+                from: value => Number(value)
+            }
+        });
+
+        // Update hidden inputs and display when slider changes
+        priceSlider.noUiSlider.on('update', function (values) {
+            minInput.value = values[0];
+            maxInput.value = values[1];
+            minDisplay.textContent = values[0];
+            maxDisplay.textContent = values[1];
+        });
+    </script>
+</body>
+
+</html>

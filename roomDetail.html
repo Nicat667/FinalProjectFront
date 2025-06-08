@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/roomDetail/style.css">
+    <title>Detail</title>
+</head>
+
+<body>
+    <header>
+        <section id="headup">
+            <div class="custom-container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 left">
+                        <div class="phone">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>(000) 999 -656 -888</p>
+                        </div>
+                        <div class="envelope">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>travelerwp@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 right">
+                        <div class="social">
+                            <div class="facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="youtube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="sidebar" class="sidebar">
+            <div class="exitIcon">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="contain">
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="./faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="nav"
+            style="background-image: url('./assets/images/home/banner-search-form-min.png'); background-size: cover;">
+            <div class="navbar">
+                <div class="cus-container">
+                    <div class="row align-items-center line">
+                        <div class="col-md-2 left">
+                            <div class="menuIcon d-none">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="logo">
+                                <a href="index.html">
+                                    <picture>
+                                        <source media="(max-width: 990px)" srcset="./assets/images/home/blackLogo.svg">
+                                        <img class="logo" src="./assets/images/home/Traveler-logo.svg"
+                                            alt="Traveler Logo">
+                                    </picture>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7 midd">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 right">
+                            <div class="currency">
+                                <span id="currency">EUR</span>
+                                <i class="fa-solid fa-angle-down curicon"></i>
+                                <i class="fa-solid fa-angle-up curicon_ d-none"></i>
+                            </div>
+                            <div class="basket">
+                                <div class="circle">
+                                    <i class="fa-regular fa-heart like-iconn"></i>
+                                </div>
+                            </div>
+                            <div class="profile">
+                                <div class="circle">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controller-name">
+                <span class="home">Home</span>
+                <span class="icon"><i class="fa-solid fa-circle"></i></span>
+                <span class="name">Contact</span>
+            </div>
+            <div class="currency-tab d-none">
+                <ul>
+                    <li class="li">
+                        USD
+                    </li>
+                    <li class="li">
+                        EUR
+                    </li>
+                    <li class="li">
+                        AZN
+                    </li>
+                </ul>
+            </div>
+            <div class="basket-tab d-none">
+
+                <div class="contain">
+                    <p class="title">Your Cart</p>
+                    <hr>
+                    <ul>
+                        <li>
+                            <span>Your cart is empty</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="login d-none">
+                <div class="uper">
+                    <span><i class="fa-solid fa-xmark"></i></span>
+                    <ul>
+                        <li>
+                            <p class="in active">Log in</p>
+                        </li>
+                        <li>
+                            <p class="up">Register</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contain signin">
+                    <p>Sign in to your account</p>
+
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-4" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email or username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control pass mt-3" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Log in</button>
+                        <div class="visible d-none">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="invis ">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                    </form>
+                    <div class="forget">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="contain signup d-none">
+                    <p>Create an account</p>
+
+                    <form method="post" action="" class="register">
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-4" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-4" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-4" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control pass-register mt-3" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control pass-register-conf mt-3"
+                                id="exampleInputPassword1" placeholder="Confirm password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Register</button>
+                        <div class="visible-register d-none">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="invis-register">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        <div class="visible-register2 d-none">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="invis-register2">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="forgetpass d-none">
+                <div class="contain">
+                    <div class="head">
+                        <p>Reset Password</p>
+                    </div>
+                    <div class="mid">
+                        <p>
+                            Enter the e-mail address associated with the account. <br>
+                            We'll e-mail a link to reset your password. </p>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-4" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Send Reset Link</button>
+                    </form>
+                    <div class="end">
+                        <span class="backTo">Back to Log in</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Images">
+            <div class="cus-container">
+                <div class="row">
+                    <div class="col-md-4 column">
+                        <div class="main">
+                            <img src="./assets/images/HotelDetail/feature-21 (1).webp">
+                        </div>
+                    </div>
+                    <div class="col-md-4 column">
+                        <div class="ordinary">
+                            <div class="item">
+                                <img src="./assets/images/HotelDetail/Breakfast-lunch-and-dinner-served.png">
+                            </div>
+                            <div class="item">
+                                <img src="./assets/images/HotelDetail/Fitness-facility-5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 column">
+                        <div class="ordinary">
+                            <div class="item">
+                                <img src="./assets/images/HotelDetail/Executive-lounge.png">
+                            </div>
+                            <div class="item">
+                                <img src="./assets/images/HotelDetail/Lobby-7.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="info" addressForMap="99 Union St, Seattle, WA 98101">
+            <div class="cus-container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 left">
+                        <div class="head">
+                            <div class="l">
+                                
+                                <div class="icons">
+                                    <div class="type">
+                                        <span>Standard</span>
+                                    </div>
+                                    <div class="x">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-maximize"></i>
+                                        </div>
+                                        <p>180 m&#178;</p>
+                                    </div>
+                                    <div class="x">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </div>
+                                        <p>x3</p>
+                                    </div>
+                                    <div class="x">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <p>x4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="r">
+                                <div class="like" isliked="true" style="cursor: pointer;">
+                                    <i class="fa-regular fa-heart like-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="title">
+                                <p>About this room</p>
+                            </div>
+                            <div class="content">
+                                <p>Set in Hanoi and with Vietnam Museum of Ethnology reachable within 1.7 km, VNAHOMES
+                                    APARTHOTEL offers express check-in and check-out, non-smoking rooms, a shared
+                                    lounge, free WiFi throughout the property and a garden. Boasting family rooms, this
+                                    property also provides guests with a terrace. The accommodation features a 24-hour
+                                    front desk and luggage storage space for guests.<br>
+
+                                    At the hotel, the rooms are equipped with a desk, a flat-screen TV, a private
+                                    bathroom, bed linen and towels. All rooms include a kettle, while some rooms also
+                                    feature a balcony and others also feature city views. All guest rooms at VNAHOMES
+                                    APARTHOTEL feature air conditioning and a wardrobe.<br>
+
+                                    Guests at the accommodation will be able to enjoy activities in and around Hanoi,
+                                    like cycling.<br>
+
+                                    West Lake is 2.5 km from VNAHOMES APARTHOTEL, while Quan Thanh Temple is 2.9 km from
+                                    the property. The nearest airport is Noi Bai International, 18 km from the hotel,
+                                    and the property offers a paid airport shuttle service.<br>
+
+                                    Couples particularly like the location — they rated it 10 for a two-person trip.</p>
+                            </div>
+                        </div>
+                        <div class="facilities">
+                            <div class="title">
+                                <p>Hotel Facilities</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 item" istrue="true">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-fan"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Air Contitioning</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 item" istrue="true">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-sink"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Hot water</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 item" istrue="true">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-wifi"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Free wifi</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 item" istrue="true">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-tv"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Flat Tv</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6 item" istrue="true">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-utensils"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>Hot meal</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="rules">
+                            <div class="title">
+                                <p>Rules</p>
+                            </div>
+                            <div class="text">
+                                <div class="up">
+                                    <span>Check in</span>
+                                    <span>12:00 pm</span>
+                                </div>
+                                <div class="down">
+                                    <span>Check out</span>
+                                    <span>12:00 pm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rooms">
+                            <div class="title">
+                                <p>Availability</p>
+                            </div>
+                            <div class="item">
+                                <div class="row g-0">
+                                    <div class="col-lg-4 col-md-12 col-sm-12 left">
+                                        <div class="img">
+                                            <img src="./assets/images/HotelDetail/Armani-Hotel-Dubai-2-800x600.webp">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12 col-sm-12 right">
+                                        <div class="desc">
+                                            <div class="l">
+                                                <div class="header">
+                                                    <p>Standard</p>
+                                                </div>
+                                                <div class="icons">
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-maximize"></i>
+                                                        </div>
+                                                        <p>180 m&#178;</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed"></i>
+                                                        </div>
+                                                        <p>x3</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-user"></i>
+                                                        </div>
+                                                        <p>x4</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="r">
+                                                <div class="price">
+                                                    <span class="number">$150</span>
+                                                    <span class="day">/night</span>
+                                                </div>
+                                                <div class="detail">
+                                                    <a href="#">Room Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row g-0">
+                                    <div class="col-lg-4 col-md-12 col-sm-12 left">
+                                        <div class="img">
+                                            <img src="./assets/images/HotelDetail/Armani-Hotel-Dubai-2-800x600.webp">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12 col-sm-12 right">
+                                        <div class="desc">
+                                            <div class="l">
+                                                <div class="header">
+                                                    <p>Standard</p>
+                                                </div>
+                                                <div class="icons">
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-maximize"></i>
+                                                        </div>
+                                                        <p>180 m&#178;</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed"></i>
+                                                        </div>
+                                                        <p>x3</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-user"></i>
+                                                        </div>
+                                                        <p>x4</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="r">
+                                                <div class="price">
+                                                    <span class="number">$150</span>
+                                                    <span class="day">/night</span>
+                                                </div>
+                                                <div class="detail">
+                                                    <a href="#">Room Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row g-0">
+                                    <div class="col-lg-4 col-md-12 col-sm-12 left">
+                                        <div class="img">
+                                            <img src="./assets/images/HotelDetail/Armani-Hotel-Dubai-2-800x600.webp">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12 col-sm-12 right">
+                                        <div class="desc">
+                                            <div class="l">
+                                                <div class="header">
+                                                    <p>Standard</p>
+                                                </div>
+                                                <div class="icons">
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-maximize"></i>
+                                                        </div>
+                                                        <p>180 m&#178;</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed"></i>
+                                                        </div>
+                                                        <p>x3</p>
+                                                    </div>
+                                                    <div class="x">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-user"></i>
+                                                        </div>
+                                                        <p>x4</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="r">
+                                                <div class="price">
+                                                    <span class="number">$150</span>
+                                                    <span class="day">/night</span>
+                                                </div>
+                                                <div class="detail">
+                                                    <a href="#">Room Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 right">
+                        <div class="book" roomPrice="190">
+                            <div class="price">
+                                <p>$ 190 / night</p>
+                            </div>
+                            <form>
+                                <div class="row g-3 align-items-end">
+                                    <div class="col-md-6">
+                                        <label for="startDate" class="form-label">Check in</label>
+                                        <input type="date" class="form-control inp" id="startDate" name="startDate"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="endDate" class="form-label">Check out</label>
+                                        <input type="date" class="form-control inp" id="endDate" name="endDate"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="cus-container2">
+                                    <div class="rooms">
+                                        <div class="number-input2">
+                                            <span>Rooms</span>
+                                            <button type="button" class="decrement2">−</button>
+                                            <input type="number" min="1" max="100" step="1" value="1" />
+                                            <button type="button" class="increment2">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <span>Total:</span>
+                                    <span class="sum">$ 0.00</span>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3 w-100 but">Book</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="move-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+
+    </main>
+    <footer>
+        <section id="footer">
+            <div class="cus-container">
+                <div class="context">
+                    <div class="row align-items-top items">
+                        <div class="col-md-3">
+                            <div class="title">
+                                <span>Support</span>
+                            </div>
+                            <div class="contex">
+                                <ul>
+                                    <li>
+                                        Help Center
+                                    </li>
+                                    <li>
+                                        Our COVID-19 Response
+                                    </li>
+                                    <li>
+                                        Cancellation options
+                                    </li>
+                                    <li>
+                                        Safety information
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="title">
+                                <span>Company</span>
+                            </div>
+                            <div class="contex">
+                                <ul>
+                                    <li>
+                                        About us
+                                    </li>
+                                    <li>
+                                        Community Bloge
+                                    </li>
+                                    <li>
+                                        Careers
+                                    </li>
+                                    <li>
+                                        Privacy policy
+                                    </li>
+                                    <li>
+                                        Terms of service
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="title">
+                                <span>Contact</span>
+                            </div>
+                            <div class="contex">
+                                <ul>
+                                    <li>
+                                        Partnerships
+                                    </li>
+                                    <li>
+                                        FAQ
+                                    </li>
+                                    <li>
+                                        Get in touch
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="title">
+                                <span>Sosial</span>
+                            </div>
+                            <div class="socials">
+                                <div class="circle facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+                                <div class="circle twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+                                <div class="circle instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="circle youtube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="logos">
+                    <div class="row copyright">
+                        <div class="col-md-6 col-sm-6">
+                            <p>© Copyright Traveler</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-end">
+                            <div class="payment">
+                                <div>
+                                    <img src="./assets/images/home/Frame-3182.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="./assets/js/roomDetail/script.js"></script>
+
+    <script src="https://kit.fontawesome.com/0d8440ac68.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

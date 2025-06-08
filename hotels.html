@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/Hotels/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet" />
     <title>Hotels</title>
 </head>
 
@@ -268,7 +269,108 @@
         <div class="move-up">
             <i class="fa-solid fa-angle-up"></i>
         </div>
-        
+
+        <div class="filters">
+            <div class="cus-container">
+                <div class="price-filter">
+                    <span class="text">Filter price</span>
+                    <span class="icon down1"><i class="fa-solid fa-angle-down"></i></span>
+                    <span class="icon up1 d-none"><i class="fa-solid fa-angle-up"></i></span>
+                </div>
+
+                <div class="star-filter">
+                    <span class="text">Hotel stars</span>
+                    <span class="icon down22"><i class="fa-solid fa-angle-down"></i></span>
+                    <span class="icon up22 d-none"><i class="fa-solid fa-angle-up"></i></span>
+                </div>
+            </div>
+
+        </div>
+
+        <form>
+            <div class="price-tab d-none">
+                <div class="cus-container">
+                    <label class="pricetext">Price range:</label>
+                    <div id="price-slider" style="margin: 20px 0;"></div>
+                    <div class="contain">
+                        <div class="min">
+                            <p>Min price:</p>
+                            <span id="minDisplay">50</span>
+                        </div>
+                        <div class="max">
+                            <p>Max price:</p>
+                            <span id="maxDisplay">300</span>
+                        </div>
+                    </div>
+                    <input type="hidden" name="minPrice" id="minPriceInput" />
+                    <input type="hidden" name="maxPrice" id="maxPriceInput" />
+
+                </div>
+
+
+            </div>
+            <div class="star-tab d-none">
+                <div class="cus-container">
+                    <div class="mb-3">
+                        <label class="form-label">Hotel stars:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="stars" value="1" id="star1">
+                            <label class="form-check-label" for="star1">
+                                <div class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="stars" value="2" id="star2">
+                            <label class="form-check-label" for="star2">
+                                <div class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="stars" value="3" id="star3">
+                            <label class="form-check-label" for="star3">
+                                <div class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="stars" value="4" id="star4">
+                            <label class="form-check-label" for="star4">
+                                <div class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="stars" value="5" id="star5">
+                            <label class="form-check-label" for="star5">
+                                <div class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="btn btn-primary cus-but">Filter</button>
+            <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
+        </form>
+
         <section id="hotels">
             <div class="cus-container">
                 <div class="filter">
@@ -311,7 +413,7 @@
                                         <div class="image">
                                             <img src="./assets/images/hotels/feature-11.webp">
                                         </div>
-                                 
+
                                         <div class="contain">
                                             <div class="stars">
                                                 <span><i class="fa-solid fa-star"></i></span>
@@ -347,7 +449,7 @@
                                         <div class="image">
                                             <img src="./assets/images/hotels/feature-11.webp">
                                         </div>
-                    
+
                                         <div class="contain">
                                             <div class="stars">
                                                 <span><i class="fa-solid fa-star"></i></span>
@@ -383,7 +485,7 @@
                                         <div class="image">
                                             <img src="./assets/images/hotels/feature-11.webp">
                                         </div>
-          
+
                                         <div class="contain">
                                             <div class="stars">
                                                 <span><i class="fa-solid fa-star"></i></span>
@@ -419,7 +521,7 @@
                                         <div class="image">
                                             <img src="./assets/images/hotels/feature-11.webp">
                                         </div>
-                      
+
                                         <div class="contain">
                                             <div class="stars">
                                                 <span><i class="fa-solid fa-star"></i></span>
@@ -453,9 +555,9 @@
                                 <div class="col-lg-6 col-md-6 item" data-price="199">
                                     <a href="x">
                                         <div class="image">
-                                            <img src="./assets/images/hotels/feature-11.webp">            
+                                            <img src="./assets/images/hotels/feature-11.webp">
                                         </div>
-                      
+
                                         <div class="contain">
                                             <div class="stars">
                                                 <span><i class="fa-solid fa-star"></i></span>
@@ -627,7 +729,9 @@
         </section>
     </footer>
     <script src="./assets/js/Hotels/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGEyKiDCVY0ACQfUFlNGsvlW9QJF-JCmc&map_ids=b559224a8cff171a769dc502&libraries=marker&callback=initMap" async defer></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGEyKiDCVY0ACQfUFlNGsvlW9QJF-JCmc&map_ids=b559224a8cff171a769dc502&libraries=marker&callback=initMap"
+        async defer></script>
 
     <script src="https://kit.fontawesome.com/0d8440ac68.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
